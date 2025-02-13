@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Default colors for light background */
+:root {
+  --background: #f2f0eb; /* Faded Warm Beige - Pantone 925 C */
+  --foreground: #2d2c2f; /* Dark text color (now uniform across all text) */
+  --font-body: 'Tillana', serif; /* Apply Tillana font for general text */
+  --font-header:
+    'Trade Winds', sans-serif; /* Apply Trade Winds font for headers */
+}
+
+/* Import Tillana font locally */
+@font-face {
+  font-family: 'Tillana';
+  src: url('/fonts/Tillana-Regular.ttf') format('truetype'); /* Path to Tillana font */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Trade Winds';
+  src: url('/fonts/TradeWinds-Regular.ttf') format('truetype'); /* Path to Trade Winds font */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a; /* Dark background for dark mode */
+    --foreground: #ededed; /* Light text for dark mode */
+  }
+}
+
+/* Apply the styles to body */
+body {
+  background-color: var(--background);
+  color: var(--foreground); /* Apply consistent dark text color */
+  font-family: var(--font-body); /* Apply Tillana font for general text */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply Tillana to all paragraphs and buttons */
+p,
+button {
+  font-family: var(--font-body); /* Force Tillana font */
+  color: var(--foreground); /* Ensure all text uses the same dark color */
+}
+
+/* Centering container styles (important for layouts) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply left-aligned text for all headers */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-header); /* Apply Trade Winds font for headers */
+  text-align: left; /* Align text to the left */
+  color: var(--foreground); /* Ensure headers also use the same dark color */
+}
+
+/* Specific layout fixes for the Hero section */
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the left */
+  justify-content: center;
+  text-align: left; /* Align text to the left */
+}
