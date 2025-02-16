@@ -1,5 +1,6 @@
 import './globals.css';
 import { Tillana, Trade_Winds } from 'next/font/google'; // Correct font names
+import Footer from '../components/Footer'; // Correct Footer import path
 import Header from '../components/Header'; // Import the header
 
 const tillana = Tillana({
@@ -23,10 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${tillana.className} antialiased`}>
-        {' '}
-        {/* Tillana font for general text */}
-        <Header />
-        <main>{children}</main>
+        <Header /> {/* Global Header */}
+        <main>{children}</main> {/* Page-specific content */}
+        <Footer /> {/* Footer component added globally */}
       </body>
     </html>
   );

@@ -13,5 +13,13 @@
   // Enable Next.js TypeScript plugin
   // https://nextjs.org/docs/app/building-your-application/configuring/typescript#typescript-plugin
   "typescript.tsdk": "node_modules/typescript/lib",
-  "cSpell.words": ["Pantone", "Tillana"]
+  "cSpell.words": [
+    "dwarven",
+    "Elven",
+    "Minas",
+    "Pantone",
+    "Rivendell",
+    "Tillana",
+    "Tirith"
+  ]
 }
